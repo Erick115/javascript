@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calcular troco</title>
+    <style>
+        *{
+            margin: 0px;
+            padding: 0px;
+        }
+
+        body{
+            
+            font-family: Arial, Helvetica, sans-serif;
+            background-color: rgb(121, 120, 120);
+            
+        }
+        div{
+            background-color: rgb(86, 211, 253);
+            width: 400px;
+            height: 200px;
+            margin: auto;
+            margin-top: 10px;
+            padding-top: 10px;
+            text-align: center;
+            border-radius: 10px;
+            box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.186);
+            
+        }
+
+        button{
+            border: 1px solid rgb(0, 186, 248);
+            padding: 30px;
+            margin: 20px;
+            font-size: 20px;
+            background-color: lightblue;
+            box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.186);
+        }
+
+        button:hover{
+            padding: 31px;
+            font-size: 20px;
+            background-color: rgb(154, 205, 222);
+            box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.186);
+        }
+
+    </style>
+</head>
+<body>
+    <div>
+        <h1>Calculando o Troco</h1>
+        <button onclick="calcular()">Comprar produto</button>
+        <script>
+           function calcular(){
+                var produto = window.prompt('Que produto você está comprando?')
+                var valor = Number(window.prompt(`Quanto custa ${produto} que voê está comprando?`))
+                var dinheiro = Number(window.prompt(`Qual foi o valor que você deu para pagar ${produto}?`))
+                var resultado = dinheiro - valor
+                window.alert(`Você comprou um ${produto} que custou ${valor.toLocaleString('pt-BR', {style: 'currency', currency: 'BRL'})}. Deu ${dinheiro.toLocaleString('pt-BR', {style: 'currency', currency: 'BRL'})} em dinheiro e vai receber ${resultado.toLocaleString('pt-BR', {style: 'currency', currency: 'BRL'})} de troco. Volte sempre!`)
+            }
+        </script>
+    </div>
+</body>
+</html>
