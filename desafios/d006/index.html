@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conversor de Temperatura</title>
+</head>
+<body>
+    <h1>Conversor de Temperatura</h1>
+    <p>
+        <label for="tem">digite uma temperatura em °C(Celsius)</label><br>
+        <input type="number" name="tem" id="tem"  value="0" oninput="converter()"><br>
+    </p>
+    <p id="result">
+        273,15°K (Kelvin) <br>
+        32°F (Fahrenheit)
+    </p>
+    <script>
+        function converter(){
+            result.innerHTML= Number(tem.value) + 273.15 +'°K (Kelvin) <br>' + Number(tem.value)*(9/5)+32 +'°F (Fahrenheit)'
+        }
+    </script>
+</body>
+</html>
