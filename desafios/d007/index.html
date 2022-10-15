@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conversor de Dinheiro</title>
+</head>
+<body>
+    <h1>Conversor de R$ para US$</h1>
+    <p>
+        <label for="real">Quantos R$ voê tem na carteira?</label><br>
+        <input type="number" name="real" id="real"  value="0" oninput="converter()"><br>
+    </p>
+    <p id="result">
+        informe o valor acima
+    </p>
+    <script>
+        function converter(){
+            result.innerHTML= 'Você tem ' + (Number(real.value) *5.33).toLocaleString('pt-BR', {style: 'currency', currency: 'USD'}) + ' em sua carteira'
+        }
+    </script>
+</body>
+</html>
